@@ -149,7 +149,7 @@ public class ElementClass {
      */
     public boolean isEnabled(){
         try {
-            element.isEnabled();
+            driver.findElement(by).click();
             return true;
         }catch (Exception e){
             return false;

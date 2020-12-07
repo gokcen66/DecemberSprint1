@@ -48,7 +48,7 @@ public class ParentClass implements Locators {
         $(LoginPagePassword).clear().setValue(password);
         $(LoginPageSubmitButton).click();
 
-        if ($(CookieDialogBox).isDisplayed()) {
+        if ($(CookieDialogBox).isEnabled()) {
             $(CookieDialogButton).shouldBe(Condition.enabled).click();
         }
 
@@ -85,7 +85,8 @@ public class ParentClass implements Locators {
     public void verifyNotificationAs(NotificationResults result){
         boolean val =
                 $(PopupMessageContainer)
-                .shouldBe(Condition.exists)
+                .find(By.xpath("//*[contains(text(),'" + result.toString() + "')]"))
+                .shouldBe(Condition.appear)
                 .getText()
                 .contains(result.toString());
         Assert.assertTrue(val);
