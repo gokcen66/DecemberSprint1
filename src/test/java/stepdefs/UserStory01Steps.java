@@ -28,18 +28,6 @@ public class UserStory01Steps extends ParentClass {
         $(DialogInputShortName).setValue(shortName);
         clickToDialogButton(Buttons.Save);
 
-
-    }
-
-    @Then("^Citizenships successfully should be created$")
-    public void citizenships_successfully_should_be_created() {
-        $(PopupMessageContainer).shouldBe(Condition.appear);
-        verifyNotificationAs(NotificationResults.created);
-
-    }
-    @Given("^Navigate to dashboard$")
-    public void navigate_to_dashboard()  {
-   clickOnMenuTo(NavMenu.Dashboard);
     }
 
     @Given("^Navigate to Citizenships page$")
@@ -56,17 +44,6 @@ public class UserStory01Steps extends ParentClass {
 
     }
 
-    @Then("^Citizenships successfully should be updated$")
-    public void citizenships_successfully_should_be_updated() {
-        $(PopupMessageContainer).shouldBe(Condition.appear);
-        verifyNotificationAs(NotificationResults.updated);
-
-    }
-    @Given("^User Navigate to dashboard$")
-    public void user_Navigate_to_dashboard() {
-    clickOnMenuTo(NavMenu.Dashboard);
-    }
-
     @Given("^User Navigate to Citizenships page$")
     public void user_Navigate_to_Citizenships_page()  {
        clickOnMenuTo(NavMenu.Citizenships);
@@ -74,16 +51,8 @@ public class UserStory01Steps extends ParentClass {
     @Then("^User delete the \"([^\"]*)\"$")
     public void user_delete_the(String citizenship)  {
         deleteTableData(citizenship);
-
     }
 
-    @Then("^Citizenships successfully should be deleted$")
-    public void citizenships_successfully_should_be_deleted()  {
-
-       $(PopupMessageContainer).shouldBe(Condition.appear);
-        verifyNotificationAs(NotificationResults.deleted);
-
-    }
 
 
 }

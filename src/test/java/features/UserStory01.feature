@@ -6,19 +6,19 @@ Feature: Citizenships functionality
 
     When User navigate to Citizenships page
     Then User create a Citizenship name as "Turkey1" short name as "Tr"
-    Then Citizenships successfully should be created
+    Then  the new input should be created
 
 
   Scenario: User story 01, Test Case 02, User should be able to update new Citizenships
-    Given Navigate to dashboard
+    Given user click to Dashboard
     And Navigate to Citizenships page
     Then User update  Citizenship name as "Turkey1" to "TurkeyCountry" short name as "TC"
-    Then Citizenships successfully should be updated
+    Then  the input should be updated
 
   Scenario: User story 01, Test Case 03, User should be able to delete new Citizenships
-    Given User Navigate to dashboard
+    Given user click to Dashboard
     And User Navigate to Citizenships page
     Then User delete the "TurkeyCountry"
-    Then Citizenships successfully should be deleted
+    Then  the input should be deleted
 
 
