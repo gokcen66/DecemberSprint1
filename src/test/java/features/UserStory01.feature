@@ -20,5 +20,5 @@ Feature: Citizenships functionality
     And User Navigate to Citizenships page
     Then User delete the "TurkeyCountry"
     Then  the input should be deleted
-
+    And   user logged out
 
