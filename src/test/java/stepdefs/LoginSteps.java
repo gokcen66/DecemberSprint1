@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageModels.NavMenu;
 import utilities.Buttons;
+import utilities.Driver;
 import utilities.NotificationResults;
 import utilities.ParentClass;
 
@@ -53,4 +54,10 @@ public class LoginSteps extends ParentClass {
     public void userClickToDashboard() {
         clickOnMenuTo(NavMenu.Dashboard);
     }
+
+    @When("^user logged out$")
+    public void userLoggedOut() {
+        Driver.quitDriver();
+    }
+
 }
