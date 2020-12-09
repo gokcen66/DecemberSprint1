@@ -26,3 +26,4 @@ Feature: User story 2
     And   user navigate to Nationalities page
     When  user delete the nationality named as "Nationality002"
     Then  the input should be deleted
+    And   user logged out
