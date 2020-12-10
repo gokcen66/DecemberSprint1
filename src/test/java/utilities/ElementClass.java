@@ -1,9 +1,12 @@
 package utilities;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -96,6 +99,28 @@ public class ElementClass {
      */
     public ElementClass setValue(String text){
         element.sendKeys(text);
+        return this;
+    }
+
+    /**
+     * sendkeys method
+     * @param text takes a string
+     * @return BasqarElement
+     */
+    public ElementClass setValue(int text){
+        element.sendKeys(text+"");
+        return this;
+    }
+
+    /**
+     * sendkeys method
+     * @param text takes a string
+     * @return BasqarElement
+     */
+    public ElementClass actionSetValue(String text){
+        Actions act = new Actions(driver);
+        act.click(element)
+                .sendKeys(text);
         return this;
     }
 
@@ -309,4 +334,5 @@ public class ElementClass {
 
         e.get(optionIndex).click();
     }
+
 }
