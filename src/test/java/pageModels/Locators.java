@@ -23,10 +23,10 @@ public interface Locators {
     By DialogInputShortName = By.cssSelector("ms-text-field[formcontrolname='shortName']>input");
     By DialogInputCode = By.cssSelector("ms-text-field[formcontrolname='code']>input");
     By DialogInputIntegrationCode = By.cssSelector("ms-text-field[formcontrolname='budgetAccountIntegrationCode']>input");
-    By DialogInputIntegrationCode2 = By.cssSelector("ms-text-field[formcontrolname='code']");
+    By DialogInputIntegrationCode2 = By.cssSelector("ms-text-field[formcontrolname='code']>input>");
     By DialogInputPriority = By.cssSelector("ms-text-field[formcontrolname='priority']");
-    By DialogInputDescription = By.cssSelector("ms-text-field[formcontrolname='description']");
-    By DialogInputDescription2 = By.cssSelector("textarea[formcontrolname='description']");
+    By DialogInputDescription = By.cssSelector("ms-text-field[formcontrolname='description']>input");
+    By DialogInputDescription2 = By.cssSelector("textarea[formcontrolname='description']>input");
     By DialogInputOrder = By.cssSelector("ms-text-field[formcontrolname='order']>input");
     By DialogSelectNextGrade = By.cssSelector("mat-select[formcontrolname='id']");
     By DialogSelectStage = By.cssSelector("mat-select[formcontrolname='attachmentStages']");
