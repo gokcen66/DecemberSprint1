@@ -9,6 +9,7 @@ public enum NavMenu {
 
     Dashboard ("Dashboard", "Dashboard"),
     Citizenships ("Citizenships", "Setup", "Parameters", "Citizenships"),
+    Countries ("Countries", "Setup", "Parameters", "Countries"),
     Nationalities ("Nationalities", "Setup", "Parameters", "Nationalities"),
     Fees ("Fee Types", "Setup", "Parameters","Fees"),
     Discounts ("Discounts", "Setup", "Parameters", "Discounts"),
