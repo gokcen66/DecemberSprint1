@@ -5,6 +5,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import pageModels.NavMenu;
 import utilities.Buttons;
 import utilities.Condition;
@@ -13,7 +14,12 @@ import java.util.Map;
 
 import static utilities.ElementClass.$;
 
-public class GradeLevelsSteps extends ParentClass {
+
+public class UserStory05Steps extends ParentClass {
+  /*  By itemPerPage=By.cssSelector("div[class='mat-select-arrow ng-tns-c215-52']");
+    By itemPerPageoption=By.xpath("(//mat-option[@role='option'])[9]");*/
+
+
     @When("^user navigate to Grade Levels page$")
     public void userNavigateToGradeLevelsPage() {
         clickOnMenuTo(NavMenu.GradeLevels);
@@ -33,7 +39,8 @@ public class GradeLevelsSteps extends ParentClass {
         $(DialogInputName).shouldBe(Condition.visible).setValue(name);
         $(DialogInputShortName).setValue(shortName);
         $(DialogInputOrder).setValue(order);
-        $(DialogSelectNextGrade).shouldBe(Condition.visible).selectOptionWithIndex(1);
+       // $(DialogSelectNextGrade).shouldBe(Condition.visible).selectOptionWithIndex(1);
+        $(DialogSelectNextGrade).shouldBe(Condition.visible).selectOptionWithText(nextGrade);
         clickToDialogButton(Buttons.Save);
 
     }
@@ -42,6 +49,9 @@ public class GradeLevelsSteps extends ParentClass {
     @Then("^user update the grade level named as \"([^\"]*)\" to \"([^\"]*)\"$")
     public void userUpdateTheGradeLevelNamedAsTo(String oldName, String newName)  {
 
+       /* $(itemPerPage).click();
+        $(itemPerPageoption).click();
+*/
         editTableData(oldName);
         $(DialogInputName).shouldBe(Condition.appear).clear().setValue(newName);
         //$(DialogInputShortName).clear().setValue(shortName);
@@ -51,7 +61,6 @@ public class GradeLevelsSteps extends ParentClass {
     @Then("^user delete the grade level named as \"([^\"]*)\"$")
     public void userDeleteTheGradeLevelNamedAs(String name) {
 
-        $(DialogInputName).scrollIntoView();
         deleteTableData(name);
     }
 }
