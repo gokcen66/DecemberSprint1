@@ -19,11 +19,11 @@ import utilities.Driver;
 
 public class Runner_RegressionTest extends AbstractTestNGCucumberTests {
 
-    @BeforeTest
-    @Parameters("browser")
-    public static void beforeClass(String browser){
-        Driver.browsers.set(browser);
-    }
+//    @BeforeTest
+//    @Parameters("browser")
+//    public static void beforeClass(String browser){
+//        Driver.browsers.set(browser);
+//    }
 
 
     @AfterClass

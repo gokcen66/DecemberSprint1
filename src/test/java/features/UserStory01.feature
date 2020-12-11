@@ -1,3 +1,4 @@
+@Regression
 Feature: Citizenships functionality
 
   Scenario: User story 01, Test Case 01, User should be able to create new Citizenships
