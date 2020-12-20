@@ -44,13 +44,14 @@ public class ElementsClass {
         return this;
     }
 
-    public ElementClass filterWithText(String text){
+    public ElementsClass filterWithText(String text){
         List<WebElement> e = new ArrayList<>();
         for (WebElement element : elements) {
             if (element.getText().toLowerCase().equalsIgnoreCase(text))
                 e.add(element);
         }
-        return $(e.get(0));
+        elements = e;
+        return this;
     }
 
 

@@ -26,7 +26,7 @@ public interface Locators {
     By DialogInputIntegrationCode2 = By.cssSelector("ms-text-field[formcontrolname='code']>input>");
     By DialogInputPriority = By.cssSelector("ms-text-field[formcontrolname='priority']");
     By DialogInputDescription = By.cssSelector("ms-text-field[formcontrolname='description']>input");
-    By DialogInputDescription2 = By.cssSelector("textarea[formcontrolname='description']>input");
+    By DialogInputDescription2 = By.cssSelector("textarea[formcontrolname='description']");
     By DialogInputOrder = By.cssSelector("ms-text-field[formcontrolname='order']>input");
     By DialogSelectNextGrade = By.cssSelector("mat-select[formcontrolname='id']");
     By DialogSelectStage = By.cssSelector("mat-select[formcontrolname='attachmentStages']");
@@ -42,6 +42,14 @@ public interface Locators {
     By PageFormNameInput = By.cssSelector("input[data-placeholder='Name']");
     By DashBoard = By.xpath("//toolbar//*[contains(text(),'Dashboard')]");
 
+    // Notifications and Item Categiries
+    By PageSelectType = By.cssSelector("mat-select[formcontrolname='type']");
+    By PageButtonSave = By.xpath("//button//span[contains(text(), 'Save')]");
+    By DialogSelectUserType = By.cssSelector("input[placeholder='User Type']");
+
+    //Dismiscal Articles Pages
+    By HumainResources = By.xpath("//span[text()='Human Resources']");
+    By DismissalArticles = By.xpath("//span[text()='Dismissal Articles']");
 
 
 }

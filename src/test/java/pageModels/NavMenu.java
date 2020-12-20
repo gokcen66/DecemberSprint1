@@ -17,8 +17,15 @@ public enum NavMenu {
     DocumentTypes ("Document Types", "Setup", "Parameters", "Document Types"),
     Notifications ("Notifications", "Messaging", "Notifications"),
     ItemCategories ("Item Categories", "Inventory", "Setup", "Item Categories"),
-    BudgetProjects ("Budget Projects", "Budget", "Setup", "Budget Projects")
+    BudgetProjects ("Budget Projects", "Budget", "Setup", "Budget Projects"),
+    DismissalArticles ("Dismissal Articles", "Human Resources", "Setup", "Dismissal Articles"),
+    PositionCategories ("Position Categories", "Human Resources", "Setup", "Position Categories"),
+    Attestations("Attestations", "Human Resources", "Setup", "Attestations"),
+    NotationKeys ("Timesheet Notation Keys", "Human Resources", "Setup", "Notation Keys"),
+    Locations ("School Locations", "Setup", "School Setup", "Locations"),
     ;
+
+
 
     private String header;
     private String[] links;

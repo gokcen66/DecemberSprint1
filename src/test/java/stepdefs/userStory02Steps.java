@@ -9,7 +9,7 @@ import utilities.ParentClass;
 
 import static utilities.ElementClass.$;
 
-public class userStory02 extends ParentClass {
+public class userStory02Steps extends ParentClass {
     @When("^user navigate to Nationalities page$")
     public void userNavigateToNationalitiesPage() {
         clickOnMenuTo(NavMenu.Nationalities);

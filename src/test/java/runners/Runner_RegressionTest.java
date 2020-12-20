@@ -28,7 +28,6 @@ public class Runner_RegressionTest extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void afterClass() {
-
         Reporter.loadXMLConfig("src/test/java/XMLFiles/extentReport.xml");
         Reporter.setSystemInfo("User Name", "Grup-4");
         Reporter.setSystemInfo("Application Name", "Basqar");
